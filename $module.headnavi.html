@@ -1,0 +1,70 @@
+<h1><{$page.title|escape:html}></h1>
+<div class="headnavi">
+  <div class="shop-logo">
+    <a href="<{$url.top}>">
+      <{if $shop.logo_url}>
+        <img src="<{$shop.logo_url}>" alt="<{$shop.name}>">
+      <{else}>
+        <{$shop.name}>
+      <{/if}>
+    </a>
+  </div>
+  <div class="spacer"></div>
+  <nav class="full-navi">
+    <ul class="nav-list">
+      <li class="nav-item nav-items">
+        <div>
+          <span class="poppins fw700">ITEMS</span>
+          <span class="annotation">アイテム</span>
+        </div>
+        <div><span class="material-icons expand head-nav-icon">expand_more</span></div>
+      </li>
+      <li class="nav-item nav-guide">
+        <div>
+          <span class="poppins fw700">GUIDE</span>
+          <span class="annotation">ガイド</span>
+        </div>
+        <div><span class="material-icons expand head-nav-icon">expand_more</span></div>
+      </li>
+      <li class="nav-item nav-contents">
+        <div>
+          <span class="poppins fw700">CONTENTS</span>
+          <span class="annotation">コンテンツ</span>
+        </div>
+        <div><span class="material-icons expand head-nav-icon">expand_more</span></div>
+      </li>
+    </ul>
+  </nav>
+
+  <ul class="account-cart-box">
+    <li class="nav-item nav-account">
+      <div class="accont-icon">
+        <span class="material-icons-outlined head-nav-icon <{if $member.is_logged_in}>login<{/if}>">account_circle</span>
+      </div>
+    </li>
+    <li class="nav-cart">
+      <div class="cart-icon">
+        <a href="<{$url.cart}>" class="head-btn-icon">
+          <span class="material-icons-outlined">shopping_cart</span>
+          <{if $cart.has_item}><span class="cart-badge poppins"><{$cart.total_quantity}></span><{/if}>
+        </a>
+      </div>
+    </li>
+  </ul>
+  <nav class="sp-header-nav">
+    <div class="nav-item search-icon">
+      <span class="material-icons-outlined head-nav-icon"></span>
+    </div>
+    <div class="nav-cart">
+      <div class="cart-icon">
+        <a href="<{$url.cart}>" class="head-btn-icon">
+          <span class="material-icons-outlined">shopping_cart</span>
+          <{if $cart.has_item}><span class="cart-badge poppins"><{$cart.total_quantity}></span><{/if}>
+        </a>
+      </div>
+    </div>
+    <div class="nav-item menu-icon">
+      <span class="material-icons-outlined head-nav-icon"></span>
+    </div>
+  </nav>
+</div>
