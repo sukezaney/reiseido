@@ -4,14 +4,12 @@
 <{$module.head}>
 </head>
 
-<body>
+<body class="toppage">
 <!-- makeshop側の出力モジュール（変更不可） -->
 <{$makeshop.body_top}>
 
   <header>
-    <div class="header__headermessage">
-      <p>全国一律 送料250円 でお届け！</p>
-    </div>
+    <{$module.headertop}>
     <{$module.headnavi}>
     <div class="menunavi-wrap">
       <{$module.menu_items}>
@@ -23,18 +21,58 @@
   </header>
 
   <div class="main-visual">
+    <!-- ホーム/ショップデザイン/トップページデザイン -->
     <{$shop.mainvisual}>
   </div>
 
   <div class="wrap">
     <div class="main-contents">
-      <{$module.card_box}>
-      <{$module.ranking}>
+      <section id="main-contents__message" class="main-contents__message">
+        <div class="main-contents__message__Contents">
+          <div class="main-contents__message__Contents__Image">
+            <img src="https://placehold.jp/cccccc/ffffff/120x250.png?text=TopImage" alt="ようこそ">
+          </div>
+          <div class="main-contents__message__Contents__Text">
+            <p>テキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+            <p>テキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+            <p>テキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+            <p>テキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 新商品（商品個別登録ページから設定） -->
       <{$module.new_arrival}>
-      <{$module.news_reviews}>
+
+      <!-- ランキング ホーム/ショップデザイン/ランキング表示設定 -->
+      <{$module.ranking}>
+
+      <!-- おすすめ商品（商品個別登録ページから設定） -->
       <{$module.recommend}>
-      <{$module.special}>
+
+      <!-- 最近チェックしたアイテム -->
       <{$module.recently}>
+
+      <section id="keyword-area" class="keyword-area product-list-wrap">
+        <h2 class="poppins fw700 base-color"><span class="title">Keyword</span><span class="annotation">キーワード</span></h2>
+        <div class="section-wrap">
+          <ul class="toppage-keyword">
+            <li><a href="#">キーワード１</a></li>
+            <li><a href="#">キーワード２</a></li>
+            <li><a href="#">キーワード３</a></li>
+            <li><a href="#">キーワード４</a></li>
+            <li><a href="#">キーワード５</a></li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ニュース＆レビュー -->
+      <{$module.news_reviews}>
+
+      <!-- {$module.recommend} -->
+      <!-- {$module.special} -->
+      <!-- {$module.card_box} -->
+
     </div>
   </div>
 
