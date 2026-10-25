@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<{$module.head}>
+</head>
+
+<body>
+<{$makeshop.body_top}>
+
+    <header>
+        <{$module.headnavi}>
+        <div class="menunavi-wrap">
+            <{$module.menu_items}>
+            <{$module.menu_guide}>
+            <{$module.menu_contents}>
+            <{$module.menu_account}>
+        </div>
+        <{$module.menu_search}>
+    </header>
+
+    <div class="main-visual">
+        <{$shop.mainvisual}>
+    </div>
+
+    <div class="wrap">
+        <div class="main-contents">
+            <{$module.card_box}>
+            <{$module.ranking}>
+            <{$module.new_arrival}>
+            <{$module.news_reviews}>
+            <{$module.recommend}>
+            <{$module.special}>
+            <{$module.recently}>
+        </div>
+    </div>
+
+<{$module.footnavi}>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="<{$page.javascript}>"></script>
+<{$makeshop.body_bottom}>
+</body>
+</html>
